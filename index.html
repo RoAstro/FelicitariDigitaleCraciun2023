@@ -71,7 +71,7 @@
         function openId(){
         id='ID'+document.getElementById('num').value;
      document.getElementById('out').innerHTML="";
-     fetch('process.env.SERVER_LINK', {
+     fetch(process.env.SERVER_LINK, {
    headers: {
       'Accept': 'application/json'
    }
