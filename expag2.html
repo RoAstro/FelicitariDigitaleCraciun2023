@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>.tremura {
+        animation: shake 0.5s;
+        animation-iteration-count: infinite;
+      }
+      
+      @keyframes shake {
+        0% { transform: translate(.5px, .5px) rotate(0deg); }
+        10% { transform: translate(-0.5px, -1px) rotate(-0.5deg); }
+        20% { transform: translate(-1.5px, 0px) rotate(.5deg); }
+        30% { transform: translate(1.5px, 1px) rotate(0deg); }
+        40% { transform: translate(0.5px, -.5px) rotate(.5deg); }
+        50% { transform: translate(-.5px, 1px) rotate(-.5deg); }
+        60% { transform: translate(-1.5px, .5px) rotate(0deg); }
+        70% { transform: translate(1.5px, 0.5px) rotate(-.5deg); }
+        80% { transform: translate(-0.5px, -0.5px) rotate(.5deg); }
+        90% { transform: translate(0.5px, 1px) rotate(0deg); }
+        100% { transform: translate(0.5px, -1px) rotate(-.5deg); }
+      }</style>
+</head>
+<body onclick='document.getElementById("tremur").className = "tremura";
+document.getElementById("audio").currentTime=15;document.getElementById("audio").play();' bgcolor="black">
+    <center>
+        <h1 style="color: yellow;font-size: 3rem;">An nou fericit, <font color="white">X</font>!</h1>
+        <H1 id="out" style="z-index: 1;;font-family: 'Roboto', serif;color: whitesmoke;font-size: 1.5rem;"></H1>
+               <h2 id="tremur" onclick="tremura()" style="color: yellow;font-size: 9rem;z-index: 2;padding: 0;margin: 0;font-family: 'Roboto', sans-serif;">2024</h2>    
+<img src="https://usagif.com/wp-content/uploads/gify/fireworks-4-usagif.gif.webp" width="100%" height="100%" style="object-fit: cover;position: absolute;left:0px;top: 0px;z-index: -1;" alt="GIF Artificii">   
+    </center>
+        <h1 style="color:yellow;position: absolute;bottom: 30px;right: 30px;">Cu drag, <br><font color="white">X</font> </h1>
+       <center><p style="position: absolute;bottom: 0;color: white;">&copy <a  href="mailto:simiontudor@programmer.net">Simion Tudor</a></p></center>
+        <audio src="https://roastro.github.io/FelicitariDigitaleCraciun2023/tomp3.cc%20-%20ABBA%20%20Happy%20New%20Year%20Video.mp3" id='audio'></audio>
+    <script>
+        document.body.style.backgroundColor = "black";
+(function(){
+    // Targeted date
+    var countDownDate = new Date("Jan 1, 2024 00:00:00").getTime();
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+        // Get current date and time
+        var now = new Date().getTime();
+        // Time to the date
+        var timeToDate = countDownDate - now;
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(timeToDate / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((timeToDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((timeToDate % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((timeToDate % (1000 * 60)) / 1000);
+        // Display the result in the element with id="counter"
+        document.getElementById("out").innerHTML ='Mai sunt '+ days + " zile " + hours + " ore " + minutes + " minute " + seconds + " secunde.";
+        // If the countdown is finished, display a message 
+        document.getElementById('zile').innerHTML=days;
+        if (timeToDate < 0) {
+            clearInterval(x);
+        }
+    }, 1000);
+
+})();
+    </script>
+</body>
+</html>
