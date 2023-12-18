@@ -27,4 +27,6 @@ function trimite(){
 })  
 document.getElementById('out').style.fontSize="10rem";
 document.getElementById('out').innerHTML="ID-ul este:    "+idn;
-}
+        
+    }
+    }
