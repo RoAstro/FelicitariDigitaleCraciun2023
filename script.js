@@ -4,6 +4,42 @@ function craciun(){
     document.getElementById('intrare').value=`<audio src="https://roastro.github.io/FelicitariDigitaleCraciun2023/jingle-bells-orchestra_56sec-172985.mp3" id="audio"></audio> <center> <h1 style="font-size: 5rem;padding: 0;margin: 0;">Crăciun Fericit, <font color="red">X</font>!</h1><br><img src="https://cdn.pixabay.com/photo/2016/08/23/16/59/santa-claus-1614994_1280.png" style="position: absolute;left: 0;" height="300px" alt="" srcset=""> </center> <center><p style="position: absolute;bottom: 0;color: white;">&copy <a  href="mailto:simiontudor@programmer.net">Simion Tudor</a></p></center> <h1 style="position:absolute; right: 20px;bottom:0;">Cu drag, <br> <font color="red" >X</font></h1> <div  class="snowflakes" aria-hidden="true"> <div style="z-index: 0;"> <div class="snowflake">❅</div> <div class="snowflake">❅</div> <div class="snowflake">❆</div> <div class="snowflake">❄</div> <div class="snowflake">❅</div> <div class="snowflake">❆</div> <div class="snowflake">❄</div> <div class="snowflake">❅</div> <div class="snowflake">❆</div> <div class="snowflake">❄</div> <div class="snowflake">❅</div> <div class="snowflake">❅</div> <div class="snowflake">❆</div> <div class="snowflake">❄</div> </div> </div>`;
     
 }
+function afis(){
+    document.getElementById('out').innerHTML=document.getElementById('intrare').value;
+}
+       
+
+
+
+function trimite(){
+    itxt=document.getElementById('intrare').value;
+     idn=Math.floor(Math.random() * 1000000) + 100000;
+     id="ID"+idn;
+     fetch('https://getpantry.cloud/apiv1/pantry/f41b80b1-bbfc-4d6b-b0a6-dc5350377bd4/basket/newBasket31', {
+    method: 'PUT',
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ [id]: itxt})
+})  
+document.getElementById('out').style.fontSize="10rem";
+document.getElementById('out').innerHTML="ID-ul este:    "+idn;
+
+fetch('https://getpantry.cloud/apiv1/pantry/c2f4ea60-1e27-4c15-a8a4-5816d2a87656/basket/newBasket39', {
+    method: 'PUT',
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ [id]: itxt})
+})  
+
+
+        
+    }
+
+
 
 
     
