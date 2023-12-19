@@ -60,10 +60,12 @@
     <title>UPLOAD</title>
 </head>
 <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
+
     <center>
         <button onclick="craciun()">Craciun</button> <button onclick="annou()">Anul Nou</button> <button onclick="trimite()">Trimite</button><p id="codOut"></p><br><br>
     <textarea oninput="afis()" name="" id="intrare" cols="150" rows="50"></textarea>
-    <br><br><br>
+        <br><br><p>Parola: </p><input id="parola" type="number"><br><br><br>
     <div id="out"></div>
 </center>
 <script src="script.js"></script>
