@@ -5,27 +5,5 @@ function craciun(){
     
 }
 
-function afis(){
-    document.getElementById('out').innerHTML=document.getElementById('intrare').value;
-}
-       
 
-
-
-function trimite(){
-    itxt=document.getElementById('intrare').value;
-     idn=Math.floor(Math.random() * 1000000) + 100000;
-     id="ID"+idn;
-     fetch('https://getpantry.cloud/apiv1/pantry/f41b80b1-bbfc-4d6b-b0a6-dc5350377bd4/basket/newBasket31', {
-    method: 'PUT',
-    headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ [id]: itxt})
-})  
-document.getElementById('out').style.fontSize="10rem";
-document.getElementById('out').innerHTML="ID-ul este:    "+idn;
-        
-    }
     
